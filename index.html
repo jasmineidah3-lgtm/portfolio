@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILERICARE FOUNDATION - Supporting Orphans & Vulnerable Children</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(24, 189, 150, 0.9) 0%, rgba(4, 120, 87, 0.9) 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(to right, #18BD96, #047857);
+        }
+        .btn-primary:hover {
+            background: linear-gradient(to right, #16a785, #036249);
+        }
+        .stats-number {
+            font-size: 3.5rem;
+            line-height: 1;
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .program-icon {
+            width: 60px;
+            height: 60px;
+        }
+        .donation-tier {
+            transition: all 0.3s ease;
+        }
+        .donation-tier:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-gradient-to-br from-teal-500 to-green-600 rounded-full flex items-center justify-center mr-3">
+                        <svg class="w-6 h-6 text-white" data-lucide="heart"></svg>
+                    </div>
+                    <h1 class="text-2x2 font-bold text-blue-900">ILERICARE <span class="text-orange-600">FOUNDATION</span></h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-teal-600 font-semibold">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-teal-600 transition-colors">About Us</a>
+                    <a href="#programs" class="text-gray-700 hover:text-teal-600 transition-colors">Programs</a>
+                    <a href="#get-involved" class="text-gray-700 hover:text-teal-600 transition-colors">Get Involved</a>
+                    <a href="#donate" class="text-gray-700 hover:text-teal-600 transition-colors">Donate</a>
+                    <a href="#impact" class="text-gray-700 hover:text-teal-600 transition-colors">Impact</a>
+                    <a href="#contact" class="text-gray-700 hover:text-teal-600 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2 text-gray-700" onclick="toggleMobileMenu()">
+                    <svg id="menuIcon" class="w-6 h-6" data-lucide="menu"></svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden border-t border-gray-200 hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block px-3 py-2 text-teal-600 font-semibold">Home</a>
+                    <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-teal-600">About Us</a>
+                    <a href="#programs" class="block px-3 py-2 text-gray-700 hover:text-teal-600">Programs</a>
+                    <a href="#get-involved" class="block px-3 py-2 text-gray-700 hover:text-teal-600">Get Involved</a>
+                    <a href="#donate" class="block px-3 py-2 text-gray-700 hover:text-teal-600">Donate</a>
+                    <a href="#impact" class="block px-3 py-2 text-gray-700 hover:text-teal-600">Impact</a>
+                    <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-teal-600">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Empowering Orphans & Vulnerable Children in Nigeria</h1>
+                    <p class="text-xl mb-8 opacity-90">We provide compassionate care, education, healthcare, and opportunities to children in need, helping them build a brighter future with dignity and hope.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#donate" class="bg-white text-teal-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg text-center transition-colors">
+                            Donate Now
+                        </a>
+                        <a href="#get-involved" class="border-2 border-white text-white hover:bg-white hover:text-teal-600 font-semibold px-8 py-4 rounded-lg text-center transition-colors">
+                            Get Involved
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="children-smiling.jpg" alt="Happy children at ILERICARE" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Our Mission</h2>
+            <div class="bg-white p-8 rounded-2xl shadow-lg max-w-3xl mx-auto">
+                <blockquote class="text-xl italic text-gray-700 mb-6">
+                    "To provide compassionate care, education, healthcare, and empowerment opportunities to Orphans and Vulnerable Children in Nigeria, enabling them to reach their full potential with dignity, hope, and love."
+                </blockquote>
+                <p class="text-teal-600 font-semibold">— ILERICARE FOUNDATION</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-teal-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="stats-number font-bold mb-2">5,000+</div>
+                    <div class="text-xl">Children Supported</div>
+                </div>
+                <div>
+                    <div class="stats-number font-bold mb-2">42</div>
+                    <div class="text-xl">Communities Reached</div>
+                </div>
+                <div>
+                    <div class="stats-number font-bold mb-2">15</div>
+                    <div class="text-xl">Years of Service</div>
+                </div>
+                <div>
+                    <div class="stats-number font-bold mb-2">98%</div>
+                    <div class="text-xl">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">About ILERICARE FOUNDATION</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Learn about our journey, vision, and the dedicated team behind our mission to transform lives.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Story</h3>
+                    <p class="text-lg text-gray-700 mb-6">Founded in 2008 by Dr. Amina Johnson, ILERICARE began as a small initiative to support orphans in Lagos. What started with just five children has grown into a nationwide movement that has touched the lives of over 5,000 vulnerable children.</p>
+                    <p class="text-lg text-gray-700 mb-6">Driven by compassion and a deep commitment to social justice, we've expanded our programs to include education, healthcare, shelter, and mentorship across Nigeria.</p>
+                    <p class="text-lg text-gray-700">Today, ILERICARE Foundation stands as a beacon of hope, providing comprehensive support to children who have faced unimaginable challenges.</p>
+                </div>
+                <div class="bg-gray-100 rounded-2xl overflow-hidden">
+                    <img src="https://placehold.co/600x400/047857/FFFFFF?text=Team+Photo" alt="ILERICARE Team" class="w-full h-auto">
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-12 text-center">Our Leadership Team</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-teal-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-teal-600" data-lucide="user"></svg>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Dr. Amina Johnson</h4>
+                        <p class="text-teal-600 font-medium mb-3">Founder & Executive Director</p>
+                        <p class="text-gray-600">With over 20 years of experience in child welfare, Dr. Johnson leads our vision and strategic direction.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-teal-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-teal-600" data-lucide="user"></svg>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Chinedu Okoro</h4>
+                        <p class="text-teal-600 font-medium mb-3">Program Director</p>
+                        <p class="text-gray-600">Chinedu oversees all our programs, ensuring they meet the highest standards of care and effectiveness.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-teal-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-teal-600" data-lucide="user"></svg>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Grace Adeleke</h4>
+                        <p class="text-teal-600 font-medium mb-3">Finance & Operations</p>
+                        <p class="text-gray-600">Grace ensures our resources are managed responsibly and transparently to maximize impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs & Projects Section -->
+    <section id="programs" class="bg-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Programs & Projects</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive support for Orphans and Vulnerable Children across Nigeria</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center program-card">
+                    <div class="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="program-icon text-teal-600" data-lucide="graduation-cap"></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Education</h3>
+                    <p class="text-gray-600 mb-6">We provide scholarships, school supplies, tutoring, and vocational training to ensure every child has access to quality education.</p>
+                    <ul class="text-left text-gray-700 space-y-2 mb-6">
+                        <li>• School fees & supplies</li>
+                        <li>• Tutoring & mentoring</li>
+                        <li>• Vocational training</li>
+                        <li>• University scholarships</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center program-card">
+                    <div class="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="program-icon text-teal-600" data-lucide="heart-pulse"></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Healthcare</h3>
+                    <p class="text-gray-600 mb-6">Comprehensive medical care, nutrition programs, and mental health support for children in our care.</p>
+                    <ul class="text-left text-gray-700 space-y-2 mb-6">
+                        <li>• Regular medical checkups</li>
+                        <li>• Nutrition programs</li>
+                        <li>• Mental health counseling</li>
+                        <li>• Emergency medical care</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center program-card">
+                    <div class="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="program-icon text-teal-600" data-lucide="home"></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Shelter</h3>
+                    <p class="text-gray-600 mb-6">Safe, nurturing homes that provide stability, love, and a sense of belonging for vulnerable children.</p>
+                    <ul class="text-left text-gray-700 space-y-2 mb-6">
+                        <li>• Safe housing</li>
+                        <li>• Nutritious meals</li>
+                        <li>• Family-style care</li>
+                        <li>• Life skills training</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center program-card">
+                    <div class="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="program-icon text-teal-600" data-lucide="users"></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Mentorship</h3>
+                    <p class="text-gray-600 mb-6">Guidance and support from caring adults who help children develop confidence and life skills.</p>
+                    <ul class="text-left text-gray-700 space-y-2 mb-6">
+                        <li>• One-on-one mentoring</li>
+                        <li>• Career guidance</li>
+                        <li>• Life skills workshops</li>
+                        <li>• Leadership development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Impact Across Nigeria</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-gray-700 mb-6">ILERICARE Foundation currently operates in 12 states across Nigeria, with our flagship children's home in Lagos and satellite programs in Abuja, Port Harcourt, Kano, and Enugu.</p>
+                        <p class="text-gray-700 mb-6">Our community outreach programs bring essential services to remote areas, ensuring that even the most isolated children can access the support they need.</p>
+                        <p class="text-gray-700">We partner with local governments, healthcare providers, and educational institutions to create sustainable solutions that address the root causes of child vulnerability.</p>
+                    </div>
+                    <div class="bg-gray-100 rounded-xl p-6">
+                        <img src="https://placehold.co/500x300/18BD96/FFFFFF?text=Nigeria+Map+with+Locations" alt="Nigeria map showing ILERICARE locations" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Get Involved</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">There are many ways you can make a difference in the lives of vulnerable children. Join our mission today.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-br from-teal-50 to-green-50 p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-teal-600" data-lucide="hand-heart"></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Volunteer</h3>
+                    <p class="text-gray-700 mb-6">Share your time, skills, and compassion with the children in our care. Whether you can visit weekly or help remotely, your presence makes a difference.</p>
+                    <ul class="text-left text-gray-700 space-y-2 mb-6">
+                        <li>• Tutoring & teaching</li>
+                        <li>• Mentorship programs</li>
+                        <li>• Event coordination</li>
+                        <li>• Professional skills sharing</li>
+                    </ul>
+                    <button class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                        Apply to Volunteer
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-teal-50 to-green-50 p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-teal-600" data-lucide="handshake"></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Partnerships</h3>
+                    <p class="text-gray-700 mb-6">Collaborate with us to expand our reach and impact. We welcome partnerships with corporations, NGOs, and community organizations.</p>
+                    <ul class="text-left text-gray-700 space-y-2 mb-6">
+                        <li>• Corporate social responsibility</li>
+                        <li>• NGO collaborations</li>
+                        <li>• Community outreach</li>
+                        <li>• In-kind donations</li>
+                    </ul>
+                    <button class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                        Explore Partnerships
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-teal-50 to-green-50 p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-teal-600" data-lucide="gift"></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Fundraising</h3>
+                    <p class="text-gray-700 mb-6">Organize events, campaigns, or challenges to raise funds and awareness for our mission. Every effort helps change lives.</p>
+                    <ul class="text-left text-gray-700 space-y-2 mb-6">
+                        <li>• Charity events</li>
+                        <li>• Online campaigns</li>
+                        <li>• Workplace giving</li>
+                        <li>• Birthday fundraisers</li>
+                    </ul>
+                    <button class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                        Start Fundraising
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="bg-teal-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Make a Difference Through Your Donation</h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">Your generous contribution helps provide essential care, education, and opportunities for Orphans and Vulnerable Children in Nigeria.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-3xl font-bold mb-8">Donation Tiers</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white bg-opacity-20 p-6 rounded-xl donation-tier">
+                            <h4 class="text-2xl font-bold mb-3">₦10,000</h4>
+                            <p class="mb-4">Provides school supplies for one child for a semester</p>
+                            <div class="h-1 bg-teal-400 rounded-full mb-2"></div>
+                        </div>
+                        <div class="bg-white bg-opacity-20 p-6 rounded-xl donation-tier">
+                            <h4 class="text-2xl font-bold mb-3">₦50,000</h4>
+                            <p class="mb-4">Covers medical care for five children for three months</p>
+                            <div class="h-1 bg-teal-400 rounded-full mb-2"></div>
+                        </div>
+                        <div class="bg-white bg-opacity-20 p-6 rounded-xl donation-tier">
+                            <h4 class="text-2xl font-bold mb-3">₦100,000</h4>
+                            <p class="mb-4">Supports one child's education for an entire year</p>
+                            <div class="h-1 bg-teal-400 rounded-full mb-2"></div>
+                        </div>
+                        <div class="bg-white bg-opacity-20 p-6 rounded-xl donation-tier">
+                            <h4 class="text-2xl font-bold mb-3">₦500,000+</h4>
+                            <p class="mb-4">Transforms lives through major projects and infrastructure</p>
+                            <div class="h-1 bg-teal-400 rounded-full mb-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Donate Now</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Donation Amount (₦)</label>
+                            <input type="number" placeholder="Enter amount" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Payment Method</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="payment" value="card" class="mr-2 text-teal-600" checked>
+                                    Card
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="payment" value="bank" class="mr-2 text-teal-600">
+                                    Bank Transfer
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Your Information</label>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" placeholder="First Name" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                                <input type="text" placeholder="Last Name" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                            </div>
+                            <input type="email" placeholder="Email Address" class="w-full mt-4 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        </div>
+                        <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-4 rounded-lg transition-colors">
+                            Donate Securely
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="bg-white bg-opacity-20 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold mb-6">Bank Account Information</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">For Donors in Nigeria</h4>
+                        <div class="space-y-3">
+                            <p><span class="font-medium">Bank Name:</span> Guaranty Trust Bank</p>
+                            <p><span class="font-medium">Account Name:</span> ILERICARE FOUNDATION</p>
+                            <p><span class="font-medium">Account Number:</span> 0651073520 </p>
+                            <p><span class="font-medium">Sort Code:</span> N/A </p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">For International Donors</h4>
+                        <div class="space-y-3">
+                            <p><span class="font-medium">Bank Name:</span> Guaranty Trust Bank Nigeria</p>
+                            <p><span class="font-medium">Account Name:</span> ILERICARE FOUNDATION</p>
+                            <p><span class="font-medium">Account Number:</span> 0651085284</p>
+                            <p><span class="font-medium">Currency:</span> USD($) </p>
+                            <p><span class="font-medium">IBAN:</span> N/A </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stories Section -->
+    <section id="impact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Impact Stories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real stories of transformation and hope from the children and communities we serve.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-teal-600" data-lucide="quote"></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">From Orphan to Doctor</h3>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 mb-6">
+                        <img src="https://placehold.co/400x300/18BD96/FFFFFF?text=Dr.+Amina" alt="Dr. Amina" class="w-full h-auto rounded-lg mb-4">
+                        <p class="text-gray-700 italic">"ILERICARE gave me more than just a home. They gave me hope, education, and the belief that I could achieve anything. Today, I'm a pediatrician serving children in my community, paying forward the love and care I received."</p>
+                        <p class="text-teal-600 font-semibold mt-4">— Dr. Amina Bello, ILERICARE Alumna</p>
+                    </div>
+                    <p class="text-gray-700">Amina lost her parents to malaria at age 8. ILERICARE provided her with shelter, education, and medical care. She graduated top of her class in medical school and now runs a free clinic in her hometown.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-teal-600" data-lucide="quote"></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Building a Brighter Future</h3>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 mb-6">
+                        <img src="https://placehold.co/400x300/047857/FFFFFF?text=David+and+Sister" alt="David and his sister" class="w-full h-auto rounded-lg mb-4">
+                        <p class="text-gray-700 italic">"When our parents passed away, I was scared for my little sister. ILERICARE didn't just take us in—they became our family. The education and support we received changed everything."</p>
+                        <p class="text-teal-600 font-semibold mt-4">— David Okonkwo, ILERICARE Alumnus</p>
+                    </div>
+                    <p class="text-gray-700">David and his younger sister were orphaned at 14 and 8. ILERICARE provided them with a stable home, education, and counseling. David now runs a successful IT business and sponsors two children through our program.</p>
+                </div>
+            </div>
+
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">Photo Gallery</h3>
+                <p class="text-xl text-gray-600 mb-8">Moments of joy, learning, and growth from our programs across Nigeria.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="https://placehold.co/300x300/18BD96/FFFFFF?text=Children+Learning" alt="Children learning" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="https://placehold.co/300x300/047857/FFFFFF?text=Medical+Care" alt="Medical care" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="https://placehold.co/300x300/18BD96/FFFFFF?text=Sports+Day" alt="Sports day" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="https://placehold.co/300x300/047857/FFFFFF?text=Graduation" alt="Graduation" class="w-full h-64 object-cover rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates Section -->
+    <section class="bg-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">News & Updates</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Stay informed about our latest projects, events, and achievements.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/400x250/18BD96/FFFFFF?text=New+School" alt="New school opening" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-teal-600 text-sm font-medium mb-2">June 15, 2023</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">New School Opens in Rural Community</h3>
+                        <p class="text-gray-700 mb-4">We're proud to announce the opening of our new educational facility in Ogun State, providing quality education to 200 children in remote areas.</p>
+                        <a href="#" class="text-teal-600 font-semibold hover:text-teal-700">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/400x250/047857/FFFFFF?text=Health+Camp" alt="Health camp" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-teal-600 text-sm font-medium mb-2">May 28, 2023</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Free Medical Camp Serves 500 Children</h3>
+                        <p class="text-gray-700 mb-4">Our mobile health unit provided free medical checkups, vaccinations, and treatment to children in underserved communities across Delta State.</p>
+                        <a href="#" class="text-teal-600 font-semibold hover:text-teal-700">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/400x250/18BD96/FFFFFF?text=Fundraiser" alt="Fundraiser event" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-teal-600 text-sm font-medium mb-2">April 10, 2023</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Annual Gala Raises ₦150 Million</h3>
+                        <p class="text-gray-700 mb-4">Thanks to our generous donors, our annual fundraising gala exceeded its target, enabling us to expand our programs to three new communities.</p>
+                        <a href="#" class="text-teal-600 font-semibold hover:text-teal-700">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+                    View All News
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Contact Us</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We'd love to hear from you. Reach out with questions, partnership ideas, or to learn more about our work.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">Get in Touch</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-4 rounded-lg transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">Our Information</h3>
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-teal-600" data-lucide="map-pin"></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2">Address</h4>
+                                <p class="text-gray-700">123 Hope Avenue, Lekki Phase 1<br>Lagos, Nigeria</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-teal-600" data-lucide="phone"></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2">Phone</h4>
+                                <p class="text-gray-700">+234 1 234 5678<br>+234 803 123 4567</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-teal-600" data-lucide="mail"></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2">Email</h4>
+                                <p class="text-gray-700">info@ilericare.org<br>donations@ilericare.org</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-teal-600" data-lucide="globe"></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2">Working Hours</h4>
+                                <p class="text-gray-700">Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-6">Connect With Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center hover:bg-teal-200 transition-colors">
+                                <svg class="w-6 h-6 text-teal-600" data-lucide="facebook"></svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center hover:bg-teal-200 transition-colors">
+                                <svg class="w-6 h-6 text-teal-600" data-lucide="twitter"></svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center hover:bg-teal-200 transition-colors">
+                                <svg class="w-6 h-6 text-teal-600" data-lucide="instagram"></svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center hover:bg-teal-200 transition-colors">
+                                <svg class="w-6 h-6 text-teal-600" data-lucide="youtube"></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="bg-teal-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Stay Connected</h2>
+            <p class="text-xl mb-8 opacity-90">Subscribe to our newsletter for updates on our programs, success stories, and ways you can help.</p>
+            <div class="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-1 px-6 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500">
+                <button class="bg-white text-teal-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition-colors">
+                    Subscribe
+                </button>
+            </div>
+            <p class="text-sm mt-4 opacity-75">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-4 h-4 text-white" data-lucide="heart"></svg>
+                        </div>
+                        <h3 class="text-xl font-bold">ILERICARE<span class="text-teal-400">FOUNDATION</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering Orphans and Vulnerable Children in Nigeria through comprehensive care, education, and opportunities.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors">
+                            <svg class="w-5 h-5" data-lucide="facebook"></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors">
+                            <svg class="w-5 h-5" data-lucide="twitter"></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors">
+                            <svg class="w-5 h-5" data-lucide="instagram"></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors">
+                            <svg class="w-5 h-5" data-lucide="youtube"></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="#get-involved" class="text-gray-400 hover:text-white transition-colors">Get Involved</a></li>
+                        <li><a href="#donate" class="text-gray-400 hover:text-white transition-colors">Donate</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Annual Reports</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Financial Statements</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Press Kit</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Volunteer Portal</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1" data-lucide="map-pin"></svg>
+                            <span>123 Hope Avenue, Lekki Phase 1, Lagos, Nigeria</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1" data-lucide="phone"></svg>
+                            <span>+234 1 234 5678</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1" data-lucide="mail"></svg>
+                            <span>info@ilericare.org</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1" data-lucide="globe"></svg>
+                            <span>www.ilericare.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ILERICARE FOUNDATION. All rights reserved. | Registered Nonprofit Organization</p>
+                <p class="mt-2 text-sm">Tax ID: 123-456-789 | Reg No: BN 1234567</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            
+            lucide.createIcons();
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        document.getElementById('menuIcon').setAttribute('data-lucide', 'menu');
+                        lucide.createIcons();
+                    }
+                }
+            });
+        });
+
+        // Update stats animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate stats when they come into view
+            const stats = document.querySelectorAll('.stats-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const finalValue = parseInt(target.textContent.replace(/,/g, ''));
+                        let start = 0;
+                        const duration = 2000;
+                        const increment = finalValue / (duration / 16);
+                        
+                        const timer = setInterval(() => {
+                            start += increment;
+                            if (start >= finalValue) {
+                                target.textContent = finalValue.toLocaleString();
+                                clearInterval(timer);
+                            } else {
+                                target.textContent = Math.floor(start).toLocaleString();
+                            }
+                        }, 16);
+                        
+                        observer.unobserve(target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            stats.forEach(stat => observer.observe(stat));
+        });
+    </script>
+</body>
+</html>
